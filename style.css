@@ -18,9 +18,14 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    color: antiquewhite;
 }
 
 .hide {
+    display: none;
+}
+
+.cohide {
     display: none;
 }
 

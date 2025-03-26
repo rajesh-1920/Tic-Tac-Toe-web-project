@@ -19,39 +19,45 @@ for (let box of boxes) {
         if (current === "o") {
             box.innerText = "O";
             current = "x";
-            box.disable = true;
+            box.disabled = true;
             check();
         }
         else {
             box.innerText = "X";
             current = "o";
-            box.disable = true;
+            box.disabled = true;
             check();
         }
-       
+
     }
 }
+
+let win = document.querySelector(".result");
+let msg = document.querySelector("#message");
 
 for (let bt of btn) {
     bt.onclick = () => {
         current = "o";
         for (let box of boxes) {
             box.innerText = "";
-            box.disable = false;
+            box.disabled = false;
+            win.classList.remove("result");
+            win.classList.add("hide");
+            msg.innerText = "";
         }
     }
 }
 
-let win = document.querySelector(".result");
-
 const check = () => {
     for (let arr of win_condition) {
-        if (boxes[arr[0]].innerText != "" && boxes[arr[1]].innerText != "" && boxes[arr[2]].innerText != "") {
-            if (boxes[arr[0]].innerText == boxes[arr[1]].innerText && boxes[arr[0]].innerText == boxes[arr[2]].innerText) {
-                let win = document.querySelector(".result");
-                win.classList.add(".result");
-                win.classList.remove(".hide");
-                
+        let val0 = boxes[arr[0]].innerText
+        let val1 = boxes[arr[1]].innerText
+        let val2 = boxes[arr[2]].innerText;
+        if (val0 != "" && val1 != "" && val2 != "") {
+            if (val0 == val1 && val0 == val2) {
+                win.classList.add("result");
+                win.classList.remove("hide");
+                msg.innerText = "congratulations " + (val0) + " you are the winer";
             }
         }
     }

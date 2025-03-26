@@ -8,6 +8,20 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #48A6A7;
+    flex-direction: column;
+
+}
+
+.result {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hide {
+    display: none;
 }
 
 .container {
@@ -38,7 +52,7 @@ body {
     box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
 }
 
-#reset-btn {
+.reset-btn {
     margin-top: 5px;
     width: 30vmin;
     border-radius: 5px;
@@ -49,6 +63,17 @@ body {
     color: aliceblue;
 }
 
-#reset-btn:hover {
+.new-btn {
+    margin-top: 15px;
+    width: 30vmin;
+    border-radius: 5px;
+    border: none;
+    height: 40px;
+    font-size: large;
+    background-color: #023b3f;
+    color: aliceblue;
+}
+
+.reset-btn:hover {
     background-color: #082727;
 }

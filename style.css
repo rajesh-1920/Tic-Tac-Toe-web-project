@@ -35,6 +35,7 @@ body {
     border-radius: 5px;
     color: red;
     font-size: 70px;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
 }
 
 #reset-btn {
@@ -46,4 +47,8 @@ body {
     font-size: large;
     background-color: #023b3f;
     color: aliceblue;
+}
+
+#reset-btn:hover {
+    background-color: #082727;
 }
